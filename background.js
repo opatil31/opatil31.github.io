@@ -99,7 +99,7 @@
   button.addEventListener('click',()=>{paused=!paused;sync();});
   preference.addEventListener('change',e=>{paused=e.matches;sync();});
   document.addEventListener('visibilitychange',sync);
-  let inView=true;
+  let inView = window.scrollY < height;
   window.addEventListener('scroll',()=>{const next=window.scrollY<height;if(next!==inView){inView=next;sync();}},{passive:true});
   window.addEventListener('resize',resize);
   resize();sync();

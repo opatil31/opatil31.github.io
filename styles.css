@@ -7,3 +7,9 @@
 .hero .eyebrow {
   color: #fff;
 }
+.portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}

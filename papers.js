@@ -24,8 +24,7 @@ window.PAPERS = [
      { label: "Code", url: "incoming" },
      { label: "Project", url: "incoming" }
    ]
- }
-
+ },
  {
    title: "Breaking Noise Shortcuts in Self-Supervised Learning via Noise-Aligned View Generation",
    authors: "Oankar R. Patil, Keenan Hom, May D. Wang, Daniel Drane",

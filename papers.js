@@ -25,4 +25,15 @@ window.PAPERS = [
      { label: "Project", url: "incoming" }
    ]
  }
+
+ {
+   title: "Breaking Noise Shortcuts in Self-Supervised Learning via Noise-Aligned View Generation",
+   authors: "Oankar R. Patil, Keenan Hom, May D. Wang, Daniel Drane",
+   venue: "MIDL (Medical Imaging with Deep Learning) '26 - Short Paper Track",
+   year: "2026",
+   abstract: "Data-driven subtyping of Alzheimer's disease (AD) using conditional variational autoencoders (cVAEs) has identified metabolic subtypes from FDG-PET, but existing approaches provide no insight into which inter-regional metabolic relationships define each subtype. We introduce a parcellated cVAE with a Differentiable Cell Complex Module (DCM) that learns higher-order topology over atlas-parcellated brain regions, enabling simultaneous subtype discovery and interpretable connectivity mapping. Applied to 716 AD subjects from ADNI, our model identifies two severity-matched subtypes with anti-correlated connectivity (r=-0.81), distinct cognitive profiles (p<0.001), and differential CSF tau (p=0.0008, corrected), corresponding to posterior-cortical and limbic AD variants.",
+   links: [
+     { label: "Paper", url: "https://openreview.net/forum?id=Izi7kUr1Ya&referrer=%5Bthe%20profile%20of%20Oankar%20R.%20Patil%5D(%2Fprofile%3Fid%3D~Oankar_R._Patil1)" },
+   ]
+ }
 ];

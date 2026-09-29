@@ -7,10 +7,11 @@
     if (value) node.textContent = value;
     return node;
   };
-  if (!papers.length) return;
+  if (!container || !papers.length) return;
   container.replaceChildren();
   papers.forEach(paper => {
     const article = element('article', 'paper');
+    if (paper.id) article.id = 'paper-' + paper.id;
     article.append(element('div', 'paper-year', String(paper.year || '')));
     const body = element('div');
     body.append(element('h3', '', paper.title));
@@ -30,6 +31,11 @@
         anchor.href = url.href;
         links.append(anchor);
       } catch { /* Ignore incomplete links while editing. */ }
+    });
+    (window.Blog?.posts || []).filter(post => paper.id && post.publicationId === paper.id).forEach(post => {
+      const anchor = element('a', '', 'Blog: ' + post.title + ' ↗');
+      anchor.href = window.Blog.href(post);
+      links.append(anchor);
     });
     if (links.children.length) body.append(links);
     article.append(body);

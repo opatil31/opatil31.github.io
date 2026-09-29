@@ -21,3 +21,25 @@ After merging the portfolio pull request, open this repository's **Settings → 
 With the current repository name, the expected project URL is **https://opatil31.github.io/oankar.github.io/**. GitHub shows the confirmed URL in Settings → Pages when deployment completes. For a root user site at `https://opatil31.github.io/`, the repository must instead be named `opatil31.github.io`.
 
 All asset paths are relative, so the site works at either location. No email address, invented papers, or third-party tracking is included.
+
+## Blog posts and publication links
+
+1. Copy `blog/post-template.html` to `blog/my-post.html`. Use a unique lowercase, hyphenated filename.
+2. In the copy, change `data-post="your-slug"` to `data-post="my-post"`. Edit the title, description, heading, date, and article body. Remove the robots `noindex` tag when publishing.
+3. Add an entry to `window.POSTS` in `posts.js`:
+   ```js
+   {
+     slug: "my-post",
+     title: "My post title",
+     date: "2026-09-29",
+     summary: "A short introduction.",
+     publicationId: "seana"
+   }
+   ```
+4. Commit and push both files. The post has its own URL: `https://opatil31.github.io/blog/my-post.html`.
+
+The optional `publicationId` must match a unique `id` in `papers.js`. Your existing paper has `id: "seana"`. This adds links in both directions: the publication gets a blog link, and the post gets a related-publication link. Several posts can reference the same paper. Omit `publicationId` for independent posts. An unknown ID shows no publication link.
+
+Posts are sorted newest first. Use YYYY-MM-DD dates. The template is unlisted and marked noindex; no sample posts appear in the blog. Setting `draft: true` hides an entry from listings, but an uploaded HTML file remains publicly accessible. Keep private drafts off the repository.
+
+Post bodies are ordinary HTML, so their content remains readable without JavaScript. The index and related-publication links use JavaScript. When you rename a slug, also rename its HTML file and update its `data-post` attribute.

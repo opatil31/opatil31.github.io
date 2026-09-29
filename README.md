@@ -43,3 +43,7 @@ The optional `publicationId` must match a unique `id` in `papers.js`. Your exist
 Posts are sorted newest first. Use YYYY-MM-DD dates. The template is unlisted and marked noindex; no sample posts appear in the blog. Setting `draft: true` hides an entry from listings, but an uploaded HTML file remains publicly accessible. Keep private drafts off the repository.
 
 Post bodies are ordinary HTML, so their content remains readable without JavaScript. The index and related-publication links use JavaScript. When you rename a slug, also rename its HTML file and update its `data-post` attribute.
+
+## Blog landing page
+
+The Blog navigation opens its own page at `https://opatil31.github.io/blog/` (`blog/index.html`). Edit its heading and introduction in that file. Posts are still managed in `posts.js`; publication links continue to work in both directions. Post navigation and “All posts” return to this page.

@@ -35,3 +35,6 @@
 .related-publication[hidden]{display:none}
 @media(max-width:600px){nav{gap:14px}.blog-card{grid-template-columns:1fr;gap:8px}.post-body{font-size:16px}.post-header h1{letter-spacing:-1px}}
 @media(max-width:360px){.header{height:auto;min-height:85px;flex-wrap:wrap;gap:10px;padding:15px 0}}
+
+.blog-page{max-width:1000px;min-height:65vh;padding-top:30px;padding-bottom:80px;overflow-wrap:anywhere}
+nav a[aria-current="page"]{color:var(--gold);text-decoration:underline;text-underline-offset:6px}

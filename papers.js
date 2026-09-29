@@ -1,6 +1,7 @@
 // Add papers here, newest first. Leave links empty or omit optional fields.
 // Copy this example into the array and replace every example value:
 // {
+//   id: "unique-paper-id",
 //   title: "Your paper title",
 //   authors: "Oankar Patil, Coauthor Name",
 //   venue: "Conference / journal / preprint",
@@ -14,6 +15,7 @@
 // }
 window.PAPERS = [
     {
+   id: "seana",
    title: "Breaking Noise Shortcuts in Self-Supervised Learning via Noise-Aligned View Generation",
    authors: "Oankar R. Patil, May D. Wang",
    venue: "NeurIPS '26 - Main Track",
